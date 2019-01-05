@@ -1,5 +1,8 @@
 package com.d1989.agent;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author daisy
  * @desc
@@ -7,20 +10,11 @@ package com.d1989.agent;
  */
 public class AgentTest {
 
-    private void fun1() throws Exception {
-        System.out.println("this is fun 1.");
-        Thread.sleep(500);
-    }
-
-    private void fun2() throws Exception {
-        System.out.println("this is fun 2.");
-        Thread.sleep(500);
-    }
-
     public static void main(String[] args) throws Exception {
-        AgentTest test = new AgentTest();
-        test.fun1();
-        test.fun2();
-
+        boolean is = true;
+        while (is) {
+            List<Object> list = new ArrayList<>();
+            list.add("hello world");
+        }
     }
 }
