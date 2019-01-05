@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Premain-Class: com.d1989.agent.MyAgent
-Can-Redefine-Classes: true
