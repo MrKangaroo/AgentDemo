@@ -21,6 +21,18 @@
             <type>jar</type>
         </dependency>
 
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>1.8.21</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy-agent</artifactId>
+            <version>1.8.22</version>
+        </dependency>
+
     </dependencies>
 
 
@@ -63,10 +75,13 @@
                         </goals>
                     </execution>
                 </executions>
+                <!-- 需要将ByteBuddy的包通过shade打入到Agent -->
                 <configuration>
                     <artifactSet>
                         <includes>
                             <include>javassist:javassist:jar:</include>
+                            <include>net.bytebuddy:byte-buddy:jar:</include>
+                            <include>net.bytebuddy:byte-buddy-agent:jar:</include>
                         </includes>
                     </artifactSet>
                 </configuration>
